@@ -1,0 +1,117 @@
+@import 'mapas.less';
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.fontFamlily{
+    font-family: Roboto, sans-serif;
+}
+
+.borderRadius{
+    border-radius: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    .fontFamlily();
+}
+
+
+header{
+    background-color: #colors[backgroundColor];
+    padding: 20px 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .branding img{
+        max-width: 100%;
+        height: auto;
+        padding-left: 20px;
+    }
+
+
+    nav{
+        .menu{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                margin-left: 20px;
+                padding-right: 20px;
+            }
+    
+            a{
+                color: #colors[corTexto];
+                text-decoration: none;
+                font-size: 16px;
+                .fontFamlily()
+            }
+        }
+    }
+}
+
+section{
+    background-color: #colors[backgroundColor];
+    padding: 40px 0;
+
+    .container{
+        h2{
+            .fontFamlily();
+            font-size: 24px;
+            color: #colors[corTexto];
+            padding-left: 20px;
+        }
+
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .product-item{
+                background: #fff;
+                border: 1px solid #ddd;
+                margin: 10px;
+                padding: 20px;
+                text-align: center;
+                width: calc(25% - 20px);
+                .borderRadius();
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                h4{
+                    .fontFamlily();
+                    font-size: 16px;
+                    color: #colors[corTexto];
+                }
+                
+                p{
+                    .fontFamlily();
+                    font-size: 16px;
+                    color: #colors[corTexto];
+                }
+
+                .product-button{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #colors[corPrimaria];
+                    color: #fff;
+                    text-decoration: none;
+                    .borderRadius()
+                }
+            }
+        }
+    }
+}
